@@ -2,6 +2,8 @@ import paramiko
 from scp import SCPClient, SCPException
 import time
 import logging
+import credendials
+
 
 logging.basicConfig(level=logging.ERROR )
 logger = logging.getLogger('global')
@@ -35,10 +37,10 @@ class SSH:
         self.scp = SCPClient(self.ssh.get_transport())
         self.scp.get(remote, local)
 timestr = time.strftime("%Y%m%d")
-myfgt=SSH(ipaddr="192.168.173.75",
-            username="admin",
-            password="admin123")
-mylinux=SSH(ipaddr="192.168.173.70",username="andy",password="admin123")
+myfgt=SSH(ipaddr=credendials.fgt,
+            username=credendials.un,
+            password=credendials.pw)
+mylinux=SSH(ipaddr="192.168.173.70",username="andy",password=credendials.pw)
 mylist=myfgt.send_command("config system global\rset admin-scp enable\rend")
 for lines in mylist:
     print (lines.strip())
