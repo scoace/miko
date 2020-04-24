@@ -37,21 +37,3 @@ class SSH:
         self.scp = SCPClient(self.ssh.get_transport())
         self.scp.get(remote, local)
 
-
-
-timestr = time.strftime("%Y%m%d")
-myfgt=SSH(ipaddr=credendials.fgt,
-            username=credendials.un,
-            password=credendials.pw)
-mylinux=SSH(ipaddr="192.168.173.70",username="andy",password=credendials.pw)
-mylist=myfgt.send_command("config system global\rset admin-scp enable\rend")
-for lines in mylist:
-    print (lines.strip())
-#     scp admin@<FortiGate_IP>:sys_config <location>
-
-mylist=myfgt.copy_file('sys_config','y:/fortinet/Bachup_fgt_'+timestr+'.conf')
-mylist=mylinux.send_command("hostname")
-for lines in mylist:
-    print (lines.strip())
-myfgt.disconnect()
-mylinux.disconnect()

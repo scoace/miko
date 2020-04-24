@@ -1,0 +1,3 @@
+CP_default_Office_Mode_addresses_pool,network,,1cc52d40-d223-47f6-b236-a144a636105d,"{'uid': '41e821a0-3720-11e3-aa6e-0800200c9fde', 'name': 'SMC User', 'domain-type': 'domain'}",24,172.16.10.0,255.255.255.0,,
+IPv6_Link_Local_Hosts,network,,caee1116-8087-4310-9208-b422d3628a7e,"{'uid': 'a0bbbc99-adef-4ef8-bb6d-defdefdefdef', 'name': 'Check Point Data', 'domain-type': 'data domain'}",,,,64,fe80::
+net_10.6.1.0,network,,e8b750b4-0a17-4aa9-974b-5a6d5db990f5,"{'uid': '41e821a0-3720-11e3-aa6e-0800200c9fde', 'name': 'SMC User', 'domain-type': 'domain'}",24,10.6.1.0,255.255.255.0,,
