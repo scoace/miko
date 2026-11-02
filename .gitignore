@@ -1,2 +1,4 @@
 credendials.py
 __pycache__
+*.json
+*.csv
